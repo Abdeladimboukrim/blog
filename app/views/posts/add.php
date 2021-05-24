@@ -1,6 +1,4 @@
-<?php include_once APPROOT . '/views/inc/header.inc.php';
-
-var_dump($_SESSION);?>
+<?php include_once APPROOT . '/views/inc/header.inc.php';?>
  
 <div class="card card-body mt-5">
     <h2 class="mb-3">Create new Post</h2>
