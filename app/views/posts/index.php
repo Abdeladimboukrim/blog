@@ -1,10 +1,10 @@
 <?php include_once APPROOT . '/views/inc/header.inc.php' ?>
 
 <div class="row mt-3">
-    <div class="col-md-6">
-        <h2>Posts</h2>
+    <div class="col-md-9">
+        <h2>Blog</h2>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-3">
         <a href="<?php echo URLROOT; ?>posts/add/" class="btn btn-info float-right">Add Post</a>
     </div>
 
@@ -17,7 +17,7 @@
         <div class="container">
             <div class="row">
                 <!-- Blog entries-->
-                <div class="col-md-8">
+                <div class="col-md-10">
                     <h1 class="my-4">
                         Blog abdeladim
                         <small>Secondary Text</small>
