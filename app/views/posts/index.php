@@ -39,8 +39,8 @@
                             <a class="btn btn-primary" href="<?php echo URLROOT; ?>posts/show/<?php echo $post->postId?>">Read More →</a>
                         </div>
                         <div class="card-footer text-muted">
-                            Posted on January 1, 2021 by
-                            <a href="#!">Start Bootstrap</a>
+                            <p>Posted on  <?php echo $post->date; ?> by <?php echo $_SESSION['firstName'] ?></p>
+                            
                         </div>
                     </div>
                     

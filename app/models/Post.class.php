@@ -23,7 +23,7 @@ class Post
     public function getPosts()
     {
 
-        $this->db->query("SELECT * FROM posts");
+        $this->db->query("SELECT * FROM posts ORDER BY date DESC");
         $posts = $this->db->fetchAll();
         if ($posts) return $posts;
         else return false;

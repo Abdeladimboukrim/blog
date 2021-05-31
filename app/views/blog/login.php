@@ -9,13 +9,15 @@
                 <!-- email input  -->
                 <div class="form-group">
                     <span for="email">Email <sup>*</sup></span>
-                    <input type="email" name="email" value="<?php echo $data['email'] ?>" class="form-control form-control-lg <?php echo (!empty($data['email_err']) ? 'is-invalid' : '') ?>">
+                    <input type="email" name="email" id="email" value="<?php echo $data['email'] ?>" class="form-control form-control-lg <?php echo (!empty($data['email_err']) ? 'is-invalid' : '') ?>">
+                    <label id="msg"></label>
                     <span class="invalid-feedback"><?php echo $data['email_err'] ?></span>
                 </div>
                 <!-- password input  -->
                 <div class="form-group">
                     <span for="Upassword">Password <sup>*</sup></span>
-                    <input type="password" name="password" value="<?php echo $data['password'] ?>" class="form-control form-control-lg <?php echo (!empty($data['password_err']) ? 'is-invalid' : '') ?>">
+                    <input type="password" name="password" id= "password" value="<?php echo $data['password'] ?>" class="form-control form-control-lg <?php echo (!empty($data['password_err']) ? 'is-invalid' : '') ?>">
+                    <label id="msg"></label>
                     <span class="invalid-feedback"><?php echo $data['password_err'] ?></span>
                 </div>
                 <div>
