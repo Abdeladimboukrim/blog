@@ -44,12 +44,15 @@ class Posts extends Controller
 
                 $data = [
                     'title' => $_POST['title'],
+                    'description' => $_POST['description'],
                     'body' => $_POST['body'],
                     'id' => $_SESSION['id'],
                     'title_err' => '',
+                    'description_err' => '',
                     'body_err' => ''
                 ];
                 if (empty($data['title'])) $data['title_err'] = 'Please fill your title';
+                if (empty($data['description'])) $data['description_err'] = 'Please fill your description';
                 if (empty($data['body'])) $data['body_err'] = 'Please fill your post body';
 
 
@@ -68,6 +71,7 @@ class Posts extends Controller
 
                 $data = [
                     'title' => '',
+                    'description' => '',
                     'body' => '',
                     'title_err' => '',
                     'body_err' => '',
@@ -91,13 +95,16 @@ class Posts extends Controller
 
                 $data = [
                     'title' => $_POST['title'],
+                    'description' => $_POST['description'],
                     'body' => $_POST['body'],
                     'id' => $post->userId,
                     'postId' => $_POST['postId'],
                     'title_err' => '',
+                    'description_err' => '',
                     'body_err' => ''
                 ];
                 if (empty($data['title'])) $data['title_err'] = 'Please fill your title';
+                if (empty($data['description'])) $data['description_err'] = 'Please fill your description';
                 if (empty($data['body'])) $data['body_err'] = 'Please fill your post body';
 
 
@@ -119,10 +126,12 @@ class Posts extends Controller
                 //load the register
                 $data = [
                     'title' => $post->title,
+                    'description' => $post->description,
                     'body' => $post->content,
                     'id' => $post->userId,
                     'postId' => $post->postId,
                     'title_err' => '',
+                    'description_err' => '',
                     'body_err' => '',
                 ];
                

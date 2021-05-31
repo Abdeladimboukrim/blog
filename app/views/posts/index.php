@@ -1,8 +1,15 @@
 <?php include_once APPROOT . '/views/inc/header.inc.php' ?>
-
+<header class="py-5 bg-light border-bottom mb-4">
+            <div class="container-fluid">
+                <div class="text-center my-5">
+                    <h1 class="fw-bolder">Welcome to Blog Abdeladim</h1>
+                    <p class="lead mb-0">A Bootstrap 5 for simple blog by abdeladim</p>
+                </div>
+            </div>
+        </header>
 <div class="row mt-3">
     <div class="col-md-9">
-        <h2>Blog</h2>
+        <h2></h2>
     </div>
     <div class="col-md-3">
         <a href="<?php echo URLROOT; ?>posts/add/" class="btn btn-info float-right">Add Post</a>
@@ -40,4 +47,9 @@
         <?php endforeach; ?>
     </div>
 </div>
+<script>
+    $(document).ready(function() {
+        $('#summernote').summernote();
+    });
+  </script>   
 <?php include_once APPROOT . '/views/inc/footer.inc.php' ?>

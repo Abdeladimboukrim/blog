@@ -33,8 +33,9 @@ class Post
     public function updatePost($data)
     {
 
-        $this->db->query("UPDATE `posts` SET `title`=:title,`content`=:content WHERE `postId`=:id");
+        $this->db->query("UPDATE `posts` SET `title`=:title,`description`=:description ,`content`=:content WHERE `postId`=:id");
         $this->db->bind(":title",$data['title']);
+        $this->db->bind(":description", $data['description']);
         $this->db->bind(":content",$data['body']);
         $this->db->bind(":id", $data['postId']);
 
@@ -45,8 +46,9 @@ class Post
 
     public function addPost($post)
     {
-        $this->db->query("INSERT INTO posts (title, content, userId) VALUES(:title, :body, :id)");
+        $this->db->query("INSERT INTO posts (title, description, content, userId) VALUES(:title,:description, :body, :id)");
         $this->db->bind(":title", $post['title']);
+        $this->db->bind(":description", $post['description']);
         $this->db->bind(":body", $post['body']);
         $this->db->bind(":id", $_SESSION['id']);
 

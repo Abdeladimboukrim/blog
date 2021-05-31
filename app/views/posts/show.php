@@ -1,8 +1,12 @@
 
 
 <?php include_once APPROOT . '/views/inc/header.inc.php'; ?>
-<div class="mt-5">
+<div class="container mt-5">
     <h2 class="my-3"><?php echo $data['post']->title ?></h2>
+
+    <div class="border rounded p-3 mb-2">
+        <?php echo $data['post']->description; ?>
+    </div>
 
     <div class="border rounded p-3 mb-2">
         <?php echo $data['post']->content; ?>
